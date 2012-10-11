@@ -20,7 +20,12 @@
 
 .left-box span.widget-title
 {
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F0B00), to(#BE3100));
+    background: #6F0B00;
+	background-image: -webkit-linear-gradient(#6F0B00,#BE3100); 
+    background-image: -moz-linear-gradient(#6F0B00, #BE3100);
+    background-image: -ms-linear-gradient(#6F0B00, #BE3100);
+    background-image: -o-linear-gradient(#6F0B00, #BE3100);
+    background-image: linear-gradient(#6F0B00, #BE3100);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	display: block;
@@ -70,7 +75,12 @@
 
 .right-box span.content-title
 {
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F0B00), to(#BE3100));
+    background: #6F0B00;
+    background-image: -webkit-linear-gradient(#6F0B00,#BE3100); 
+    background-image: -moz-linear-gradient(#6F0B00, #BE3100);
+    background-image: -ms-linear-gradient(#6F0B00, #BE3100);
+    background-image: -o-linear-gradient(#6F0B00, #BE3100);
+    background-image: linear-gradient(#6F0B00, #BE3100);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	display: block;
