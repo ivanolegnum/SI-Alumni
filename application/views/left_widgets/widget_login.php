@@ -29,7 +29,7 @@
 		$USER_DATA = $this->user->get_where(array('id' => $USER_ID, 'level' => $LEVEL));
 		
 		// Content
-		$CONTENT = '<span class="intro">Selamat datang,<br /><strong>'.$USER_DATA->userid.'</strong></span>';
+		$CONTENT = '<span class="intro">Selamat datang,<br /><strong>'.$USER_DATA->username.'</strong></span>';
 		$CONTENT .= '<ul>';
 			$CONTENT .= '<li>'.anchor('profile', 'Profil Saya').'</li>';
 			

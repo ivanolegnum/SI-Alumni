@@ -38,7 +38,7 @@ class Main_ctrl extends CI_Controller {
 		if($validate->run())
 		{
 			// Set Data
-			$data = array('userid' => set_value('userid'), 'password' => set_value('password'));
+			$data = array('username' => set_value('userid'), 'password' => set_value('password'));
 			$result = $this->user->get_where($data);
 			
 			// Setting Session
@@ -73,7 +73,7 @@ class Main_ctrl extends CI_Controller {
 		$password = set_value('password');
 		
 		// Check the data
-		$data = array('userid' => $userid, 'password' => $password);
+		$data = array('username' => $userid, 'password' => $password);
 		$isExist = $this->user->total($data);
 		if($isExist > 0) return true;
 		else return false;
@@ -86,7 +86,7 @@ class Main_ctrl extends CI_Controller {
 		$userid = set_value('userid');
 		
 		// Check the data
-		$data = array('userid' => $userid, 'status' => '1');
+		$data = array('username' => $userid, 'status' => '1');
 		$isExist = $this->user->total($data);
 		if($isExist > 0) return true;
 		else return false;

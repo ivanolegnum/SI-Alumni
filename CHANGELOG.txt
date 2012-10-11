@@ -23,9 +23,7 @@ Adapun format yang diberikan adalah sebagai berikut:
 * Versi Sistem: ALPHA 0.5
 * [ADDED] File javascript: "fasilkom.js"
 * Memindahkan file "CHANGELOG.txt" ke folder "upload"
-* [ADDED] Project Hosting: GITHUB/nurimansyah/SI-Alumni.git
-* ASDFGH
-
+* [ADDED] Project Hosting: GITHUB/nurimansyah/SI-Alumni.git 
 
 [10 Oktober 2012]
 * Versi Sistem: ALPHA 0.4

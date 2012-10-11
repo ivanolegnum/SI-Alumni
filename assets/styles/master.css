@@ -32,6 +32,8 @@ img {
     border: none;
 }
 
+img { border: none; }
+
 /* Container */
 .container
 {

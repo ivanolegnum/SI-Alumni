@@ -96,7 +96,7 @@ class Alumni_ctrl extends CI_Controller {
 			
 				// Alumni Data
 				'id_user' => $this->session->userdata('USER_ID'),
-				'nim' => $this->user->get_where(array('id' => $this->session->userdata('USER_ID')))->userid,
+				'nim' => $this->user->get_where(array('id' => $this->session->userdata('USER_ID')))->username,
 				'nama' => set_value('nama'),
 				'id_jurusan' => set_value('jurusan'),
 				'ttl' => set_value('ttl'),
