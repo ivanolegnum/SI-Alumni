@@ -24,6 +24,7 @@ Adapun format yang diberikan adalah sebagai berikut:
 * [ADDED] File javascript: "fasilkom.js"
 * Memindahkan file "CHANGELOG.txt" ke folder "upload"
 * [ADDED] Project Hosting: GITHUB/nurimansyah/SI-Alumni.git
+* ASDFGH
 
 
 [10 Oktober 2012]
