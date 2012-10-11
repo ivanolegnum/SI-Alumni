@@ -1,0 +1,92 @@
+/*
+	| FASILKOM UNSRI
+	| master.css
+	| Author: nurimansyah.rifwan@gmail.com
+*/
+
+/* File Imports */
+@import url('header.css'); /* Header Import */
+@import url('content.css'); /* Content Import */
+
+/* Widget Style Imports */
+@import url('widgets/login.css'); /* Login Widget */
+
+/* Contents Imports */
+@import url('contents/alumni.css'); /* Alumni Registration */
+
+/* Default Style */
+*, body
+{
+	margin: 0;
+	padding: 0;
+	font-family: "Verdana", Arial;
+	font-size: 12px;
+}
+
+body
+{
+	background: #241714;
+	color: #C96823;
+}
+
+/* Container */
+.container
+{
+	width: 950px;
+	margin: 0 auto 0 auto;
+	background: #C9B849;
+	box-shadow: 0 1px 5px #ddd;
+}
+
+/* Top */
+.top
+{
+	height: 180px;
+}
+
+/* Main Menu Style */
+.main-menu
+{
+	background: #6F0B00;
+	height: 30px;
+}
+
+.main-menu ul li a
+{
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	height: 20px;
+	display: block;
+	padding: 5px;
+	border-right: 1px solid #530800;
+	border-left: 1px solid #934840;
+	text-shadow: 1px 1px 1px #C96823;
+}
+
+.main-menu ul li a:hover
+{
+	background: #C96823;
+	color: #6F0B00;
+	text-shadow: 1px 1px 1px #BE3100;
+}
+
+.main-menu ul
+{
+	list-style: none inside;
+}
+
+.main-menu ul li
+{
+	float: left;
+}
+
+/* Bottom */
+.bottom
+{
+	background: #241714;
+	margin-top: 10px;
+	padding: 5px;
+	font-size: 11px;
+}

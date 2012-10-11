@@ -1,0 +1,67 @@
+###################################################
+##### CHANGELOG: VERSION A.0.5                #####
+##### SISTEM INFORMASI ALUMNI FASILKOM UNSRI  #####
+##### AUTHOR: REDI VANHAR, NURIMANSYAH RIFWAN #####
+###################################################
+
+===========================================================================================
+KETERANGAN:
+Dibawah ini merupakan daftar-daftar perubahan yang ada dalam pengembangan
+Sistem Informasi Alumni FASILKOM UNSRI.
+
+Adapun format yang diberikan adalah sebagai berikut:
+- [Tanggal Bulan Tahun] Yaitu format tanggal dimana perubahan terakhir dilakukan.
+- [FIX] Yaitu prefix bahwa ada perbaikan pada project.
+- [ADDED] Yaitu prefix bahwa ada penambahan pada project.
+- [DELETED] Yaitu prefix bahwa ada penghapusan data/kode pada project.
+===========================================================================================
+
+###########################################################################################
+###########################################################################################
+----- CHANGELOG START -----
+[11 Oktober 2012]
+* Versi Sistem: ALPHA 0.5
+* [ADDED] File javascript: "fasilkom.js"
+
+
+[10 Oktober 2012]
+* Versi Sistem: ALPHA 0.4
+* [ADDED] File style: "contents/alumni.css"
+* [ADDED] File view: "right_contents/content_message.php"
+* [ADDED] File model: "model_pekerjaan.php"
+* [DELETED] File view: "right_contents/content_message.php"
+
+[08 Oktober 2012]
+* Versi Sistem: ALPHA 0.3
+* [ADDED] File view: "right_contents/content_admin_alumni_list_data.php"
+* [ADDED] File model: "model_alumni.php"
+* [ADDED] File view: "right_contents/content_form_alumni_register.php"
+
+[07 Oktober 2012]
+* Versi Sistem: ALPHA 0.2
+* [ADDED] File view: "right_contents/content_frontpage.php"
+* [ADDED] File controller: "admin_ctrl.php"
+* [ADDED] File view: "right_contents/content_admin_frontpage.php"
+* [ADDED] File view: "right_contents/content_admin_management_alumni.php"
+* [ADDED] File view: "right_contents/content_admin_alumni_list_jurusan.php"
+* [ADDED] File model: "model_alumni.php"
+
+[06 Oktober 2012]
+* Versi Sistem: ALPHA 0.1
+* Project dimulai.
+* [ADDED] File codeigniter dicopy ke folder /www/alumni-baru/
+* [ADDED] File view: "view_master.php".
+* [ADDED] File assets yaitu file master CSS halaman view_master.php
+			-] Folder "/images"
+			-] File: content.css, header.css, master.css
+			-] Folder "/widgets"
+				-] File: login.css
+* [ADDED] File controller main: main_ctrl.php
+* [ADDED] File view: "view_left_content.php"
+* [ADDED] File view: "left_widgets/widget_login.php"
+* [ADDED] File view: "left_widgets/widget_menu.php"
+* [ADDED] File model: "model_user.php"
+
+----- CHANGELOG END   -----
+###########################################################################################
+###########################################################################################

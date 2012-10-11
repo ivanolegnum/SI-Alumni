@@ -1,0 +1,62 @@
+/*
+	| FASILKOM UNSRI
+	| widgets/login.css
+	| Author: nurimansyah.rifwan@gmail.com
+*/
+
+#widget-login form label
+{
+	float: left;
+	display: block;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: 75px;
+}
+
+#widget-login form input
+{
+	font-family: "Verdana", Arial;
+	font-size: 12px;
+	width: 85px;
+	float: left;
+	border: 1px solid #C96823;
+	padding: 3px;
+	color: #C96823;
+	margin-bottom: 10px;
+}
+
+#widget-login form input[type="submit"]
+{
+	margin-left: 85px;
+}
+
+#widget-login form small.error
+{
+	color: #ff0000;
+	font-size: 10px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#widget-login ul
+{
+	border-top: 1px solid #C96823;
+	margin-top: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	list-style: square inside;
+}
+
+#widget-login ul li a
+{
+	color: #C96823;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #fca364;
+}
+
+#widget-login ul li a:hover
+{
+	text-decoration: underline;
+	color: #BE3100;
+}

@@ -1,0 +1,54 @@
+/*
+	| FASILKOM UNSRI
+	| alumni.css
+	| Author: nurimansyah.rifwan@gmail.com
+*/
+
+form#register-alumni small, form#register-alumni strong.pekerjaan
+{
+	font-size: 10px;
+}
+
+form#register-alumni small.error
+{
+	color: #ff0000;
+	font-size: 10px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+/* Table */
+form#register-alumni table thead tr th
+{
+	border-bottom: 1px solid #BE3100;
+	border-top: 1px solid #BE3100;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background: #e1daaf;
+}
+
+form#register-alumni table tbody tr td
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+form#register-alumni input, form#register-alumni textarea, form#register-alumni select
+{
+	border: 1px solid #BE3100;
+	padding: 3px;
+	font-size: 11px;
+}
+
+form#register-alumni input[type="submit"], form#register-alumni input[type="reset"]
+{
+	margin-right: 10px;
+	color: #BE3100;
+	font-weight: bold;
+}
+
+form#register-alumni input[type="reset"]
+{
+	font-size: 10px;
+	font-weight: normal;
+}

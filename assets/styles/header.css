@@ -1,0 +1,21 @@
+/*
+	| FASILKOM UNSRI
+	| header.css
+	| Author: nurimansyah.rifwan@gmail.com
+*/
+
+/* Default */
+.header
+{
+	background: #000;
+	height: 20px;
+	padding: 5px;
+	font-size: 18px;
+	color: #fff;
+}
+
+/* Logo */
+.logo img
+{
+	height: 150px;
+}

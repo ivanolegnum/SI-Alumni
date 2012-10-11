@@ -1,0 +1,186 @@
+/*
+	| FASILKOM UNSRI
+	| content.css
+	| Author: nurimansyah.rifwan@gmail.com
+*/
+
+/* Left Content */
+.left-content
+{
+	float: left;
+	width: 200px;
+	margin-right: 10px;
+}
+
+.left-box
+{
+	margin: 10px auto 10px auto;
+	width: 190px;
+}
+
+.left-box span.widget-title
+{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F0B00), to(#BE3100));
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	display: block;
+	height: 15px;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #777777;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 1px solid #974e1a;
+}
+
+.left-box div.widget-content
+{
+	border-top: 1px solid #d78e5a;
+	background: #ffffff;
+	padding: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* Right Content */
+.right-content
+{
+	float: left;
+	width: 740px;
+}
+
+.right-box
+{
+	width: 730px;
+	margin-top: 10px;
+}
+
+.right-box .small-col
+{
+	width: 300px;
+	margin-right: 10px;
+	float: left;
+}
+
+.right-box .med-col
+{
+	width: 420px;
+	float: left;
+}
+
+.right-box span.content-title
+{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F0B00), to(#BE3100));
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	display: block;
+	height: 15px;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #777777;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 1px solid #974e1a;
+}
+
+.right-box div.content
+{
+	border-top: 1px solid #d78e5a;
+	background: #ffffff;
+	padding: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.right-box div.content h1
+{
+	margin-top: 10px;
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+.right-box div.content small
+{
+	font-size: 10px;
+}
+
+.right-box div.content ul
+{
+	list-style: square inside;
+}
+
+.right-box div.content ul li a
+{
+	color: #6F0B00;
+	text-decoration: underline;
+	font-size: 11px;
+}
+
+.right-box div.content ul li a:hover
+{
+	color: #BE3100;
+	text-decoration: none;
+}
+
+.right-box div.content hr
+{
+	border: none;
+	border-bottom: 1px solid #BE3100;
+	margin: 2px 0 5px 0;
+}
+
+.right-box div.content ul.list-galeri
+{
+	list-style: none inside;
+	width: 345px;
+	margin: 0 auto 0 auto;
+}
+
+.right-box div.content ul.list-galeri li
+{
+	float: left;
+	border: 2px solid #BE3100;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.right-box div.content p.breadcrumb a, .right-box div.content p.breadcrumb strong
+{
+	font-size: 11px;
+	text-decoration: none;
+	color: #6F0B00;
+}
+
+.right-box div.content p.breadcrumb a:hover
+{
+	color: #BE3100;
+	text-decoration: none;
+}
+
+/* Table */
+/* ================================================================================= */
+/* List Alumni */
+table#list-alumni
+{
+	border-left: 1px solid #6F0B00;
+	border-top: 1px solid #6F0B00;
+	width: 100%;
+}
+
+table#list-alumni th
+{
+	border-bottom: 1px solid #6F0B00;
+	border-right: 1px solid #6F0B00;
+	background: #BE3100;
+	padding: 5px;
+	color: #FFFFFF;
+}
+
+table#list-alumni td
+{
+	border-bottom: 1px solid #6F0B00;
+	border-right: 1px solid #6F0B00;
+	padding: 5px;
+	text-align: center;
+}
