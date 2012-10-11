@@ -29,6 +29,8 @@ body
 	color: #C96823;
 }
 
+img { border: none; }
+
 /* Container */
 .container
 {

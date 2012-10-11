@@ -13,7 +13,7 @@
 	
 	<div class="content">
 	
-		<p>Selamat datang, <strong><?php echo $account->userid;?></strong> dihalaman Manajemen Alumni!</p>
+		<p>Selamat datang, <strong><?php echo $account->username;?></strong> dihalaman Manajemen Alumni!</p>
 		<p>Pada halaman ini, kamu dapat mengubah informasi mengenai data alumni kamu.</p>
 		<hr />
 		
@@ -35,10 +35,11 @@
 		// Form Open
 		echo form_open(NULL, 'id="alumni-update"');
 		
-		$table->set_heading(array('width' => '40%'), array('align' => 'right', 'width' => '60%', 'data' => '[Edit Link]'));
+		$table->set_heading(array('width' => '40%'), array('align' => 'right', 'width' => '60%', 'data' => '<a href="javascript: void(0);" id="uia-click">[Update Informasi Alumni]</a>'));
 		// Informasi Data Alumni
 		$table->add_row('Nomor Induk Mahasiswa (NIM)', '<strong>$NIM</strong>');
 		$table->add_row(form_label('Nama Lengkap', 'nama'), '<span id="alumni_nama">$NAMA</span>');
+		$table->add_row(form_label('Jurusan', 'nama'), '<strong>$JURUSAN</strong>');
 		
 		echo $table->generate();
 		
