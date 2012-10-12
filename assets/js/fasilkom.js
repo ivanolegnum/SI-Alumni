@@ -10,6 +10,10 @@ $(function()
 	{
 		// Informasi Alumni
 		EditField('alumni_nama', 'text');
+		EditField('alumni_ttl', 'text');
+		EditField('alumni_yudisium', 'text');
+		EditField('alumni_wisuda', 'text');
+		EditField('alumni_studi', 'text');
 		// Informasi Orang Tua
 		
 		// Disabled
