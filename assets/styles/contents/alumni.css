@@ -33,14 +33,14 @@ form.register-alumni table tbody tr td
 	padding-bottom: 5px;
 }
 
-form.register-alumni input, form.register-alumni textarea, form.register-alumni select
+form.register-alumni input, form.register-alumni textarea, form.register-alumni select, form.register-alumni button
 {
 	border: 1px solid #BE3100;
 	padding: 3px;
 	font-size: 11px;
 }
 
-form.register-alumni input[type="submit"], form.register-alumni input[type="reset"]
+form.register-alumni input[type="submit"], form.register-alumni input[type="reset"], form.register-alumni button
 {
 	margin-right: 10px;
 	color: #BE3100;

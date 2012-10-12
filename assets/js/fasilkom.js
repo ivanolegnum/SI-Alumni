@@ -30,6 +30,7 @@ $(function()
 		
 		// Show Tombol Update Data Alumni
 		$('#btn-update-alumni').show();
+		$('#btn-update-alumni-batal').show();
 	});
 	
 	// Form Validation Update Alumni
@@ -133,6 +134,7 @@ $(function()
 	
 	// Hide Button Update Alumni
 	$('#btn-update-alumni').hide();
+	$('#btn-update-alumni-batal').hide();
 	
 	// Ajax Loading
 	$('#ajax-loading').ajaxStart(function() {
@@ -141,6 +143,11 @@ $(function()
 	}).ajaxStop(function() {
 		$(this).hide();
 		$('#form-update-alumni').fadeIn();
+	});
+	
+	// Button Batal Clicked
+	$('#btn-update-alumni-batal').click(function() {
+		window.location.reload();
 	});
 });
 

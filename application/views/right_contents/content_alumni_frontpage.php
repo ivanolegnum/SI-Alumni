@@ -66,7 +66,7 @@
 		$table->add_row(form_label('Telepon', 'alumni_telp_ot'), '<span id="alumni_telp_ot">'.$ALUMNI->telepon_ot.'</span>');
 		$ponsel = $ALUMNI->ponsel_ot && $ALUMNI->ponsel_ot != '+62' ? $ALUMNI->ponsel_ot : '+62';
 		$table->add_row(form_label('Ponsel', 'alumni_ponsel_ot'), '<span id="alumni_ponsel_ot">'.$ponsel.'</span>');
-		$table->add_row(array('colspan' => '2', 'align' => 'center', 'data' => form_submit(NULL, 'Update Data Alumni', 'id="btn-update-alumni" class="submit"')));
+		$table->add_row(array('colspan' => '2', 'align' => 'center', 'data' => form_submit(NULL, 'Update Data Alumni', 'id="btn-update-alumni" class="submit"').form_button(NULL, 'Batal', 'id="btn-update-alumni-batal"')));
 		echo $table->generate();
 		
 		// Informasi Pekerjaan
