@@ -38,5 +38,14 @@ class Model_alumni extends CI_Model
 		$this->db->insert('alumni');
 		return true;
 	}
+	
+	// Update Data
+	public function update($idx = 0, $data = NULL)
+	{
+		$this->db->set($data);
+		$this->db->where('id_user', $idx);
+		$this->db->update('alumni');
+		return true;
+	}
 
 }

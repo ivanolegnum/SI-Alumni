@@ -54,6 +54,7 @@ $route['admincp/alumni/(:num)/(:num)'] = 'admin_ctrl/page_alumni_list/$1/$2';
 
 // Alumni Page
 $route['alumni'] = 'alumni_ctrl';
+$route['alumni/e/update'] = 'alumni_ctrl/AJAX_Update_Alumni';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

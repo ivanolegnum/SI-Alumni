@@ -214,5 +214,65 @@ class Alumni_ctrl extends CI_Controller {
 			else return true;
 		} else return true;
 	}
+	
+	// AJAX Update Alumni
+	public function AJAX_Update_Alumni()
+	{
+		// Form Validation
+		$this->load->library('form_validation');
+		$validate = $this->form_validation;
+		
+		// Set Rules
+		$validate
+		// Data Alumni
+		->set_rules('id_user', NULL, 'required|trim|numeric')
+		->set_rules('nama', NULL, 'required|trim')
+		->set_rules('ttl', NULL, 'required|trim')
+		->set_rules('yudisium', NULL, 'required|trim')
+		->set_rules('wisuda', NULL, 'required|trim')
+		->set_rules('studi', NULL, 'required|trim')
+		->set_rules('ipk', NULL, 'required|trim')
+		->set_rules('alamat', NULL, 'required|trim')
+		->set_rules('email', NULL, 'required|trim|valid_email')
+		->set_rules('telp', NULL, 'required|trim|numeric')
+		->set_rules('ponsel', NULL, 'trim|numeric')
+		// Data Orang Tua
+		->set_rules('nama_ot', NULL, 'required|trim')
+		->set_rules('alamat_ot', NULL, 'required|trim')
+		->set_rules('telp_ot', NULL, 'required|trim|numeric')
+		->set_rules('ponsel_ot', NULL, 'trim|numeric');
+		
+		// Run
+		if(!$validate->run()) echo FALSE;
+		else
+		{
+			// Set Data
+			$id_user = set_value('id_user');
+			$data = array(
+				// Data Alumni
+				'nama' => set_value('nama'),
+				'ttl' => set_value('ttl'),
+				'tgl_yudisium' => set_value('yudisium'),
+				'tgl_wisuda' => set_value('wisuda'),
+				'lama_studi' => set_value('studi'),
+				'ipk' => set_value('ipk'),
+				'alamat' => set_value('alamat'),
+				'email' => set_value('email'),
+				'telepon' => set_value('telp'),
+				'ponsel' => set_value('ponsel'),
+				// Data Orang Tua
+				'nama_ot' => set_value('nama_ot'),
+				'alamat_ot' => set_value('alamat_ot'),
+				'telepon_ot' => set_value('telp_ot'),
+				'ponsel_ot' => set_value('ponsel_ot')
+			);
+			
+			// Update 
+			$this->load->model('model_alumni', 'alumni');
+			$this->alumni->update($id_user, $data);
+			// echo TRUE
+			echo TRUE;
+		}
+	}
 
 }
