@@ -5,7 +5,7 @@
 	<title>Sistem Informasi Alumni FASILKOM UNSRI</title>
 	
 	<!-- Meta Tag -->
-	<meta name="generator" content="Notepad++ 6.1.8" />
+	<meta name="generator" content="Notepad++ 6.1.8, Codelobster 3.9.2" />
 	<meta name="author" content="Fasilkom, UNSRI" />
 	<meta name="description" content="Sistem Informasi Alumni FASILKOM UNSRI" />
 	<meta name="keywords" content="sistem, informasi, alumni, fasilkom, unsri" />
@@ -19,6 +19,7 @@
 	
 	<!-- Script -->
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.2.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.validate.js');?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/fasilkom.js');?>"></script>
 	
 </head>

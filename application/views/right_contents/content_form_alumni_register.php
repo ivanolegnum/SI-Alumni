@@ -9,7 +9,7 @@
 <?php
 		
 // Form Open
-echo form_open(NULL, 'id="register-alumni"');
+echo form_open(NULL, 'class="register-alumni"');
 		
 $tpl = array('table_open' => '<table border="0" cellpadding="0" cellspacing="0" width="100%">');
 $table = $this->table;
