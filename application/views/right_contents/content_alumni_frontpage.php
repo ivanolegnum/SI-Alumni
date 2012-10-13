@@ -1,4 +1,4 @@
-<?php 
+<?php
 	
 	// Store Account Data
 	$account = $this->user->get_where(array('id' => $this->session->userdata('USER_ID')));

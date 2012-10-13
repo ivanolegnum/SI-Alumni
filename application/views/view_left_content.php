@@ -4,5 +4,5 @@
 	/* Login Widget */
 	$this->load->view('left_widgets/widget_login');
 	/* Menu Widget */
-	//$this->load->view('left_widgets/widget_menu');
+	$this->load->view('left_widgets/widget_menu');
 ?>
