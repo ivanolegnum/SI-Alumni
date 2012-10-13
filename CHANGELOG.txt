@@ -25,6 +25,7 @@ Adapun format yang diberikan adalah sebagai berikut:
 *[somthing new]
 *tambah lagi juga
 * [ASASDASDASDSD]
+* MANTAPPPP
 *ubah ubah lagi,,, oke
 
 [11 Oktober 2012]
