@@ -28,6 +28,9 @@ body
 	background: #241714;
 	color: #C96823;
 }
+img {
+    border: none;
+}
 
 img { border: none; }
 

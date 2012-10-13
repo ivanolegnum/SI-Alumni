@@ -23,11 +23,13 @@
 		$LEVEL = $this->session->userdata('LEVEL');
 		$USER_ID = $this->session->userdata('USER_ID');
 		
-		$TITLE = 'Panel Anggota';
+		
 		
 		// Get User data
 		$USER_DATA = $this->user->get_where(array('id' => $USER_ID, 'level' => $LEVEL));
 		
+        $TITLE = 'Panel Anggota';
+        
 		// Content
 		$CONTENT = '<span class="intro">Selamat datang,<br /><strong>'.$USER_DATA->username.'</strong></span>';
 		$CONTENT .= '<ul>';
@@ -45,6 +47,12 @@
 				case 'admin':
 					$CONTENT .= '<li>'.anchor('admincp', 'Halaman Administrator').'</li>';
 				break;
+
+                // Level Pengguna Alumni
+				case 'pengguna':
+					$CONTENT .= '<li>'.anchor('pa', 'Halaman Pengguna Alumni').'</li>';
+				break;                
+                
 			}
 			
 			$CONTENT .= '<li>'.anchor('logmeout', 'Log Me Out').'</li>';

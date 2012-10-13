@@ -49,12 +49,28 @@ class Main_ctrl extends CI_Controller {
 			// Check if alumni, then redirect a head to alumni page
 			if($result->level == 'alumni')
 			{
-				// Load Model
+				// Load Model 
 				$this->load->model('model_alumni', 'alumni');
 				$alumni = $this->alumni->get_where(array('id_user' => $result->id));
 				// Check if the status is '0'
 				if(empty($alumni)) redirect('alumni');
-			}
+			}else
+            if ($result->level == 'pengguna')
+			{
+				// Load Model 
+				$this->load->model('model_pengguna', 'pa');
+				$pengguna = $this->pa->get_where(array('id_user' => $result->id));
+				// Check if the status is '0'
+				if(empty($pa)) redirect('pa');
+            }
+            else
+            {
+                // Load Model 
+				$this->load->model('model_admin', 'admin');
+				$pengguna = $this->admin->get_where(array('id_user' => $result->id));
+				// Check if the status is '0'
+				if(empty($admin)) redirect('admin');
+            }
 			
 		}
 		
