@@ -22,13 +22,13 @@ $table->set_template($tpl);
 $data_jurusan = array('-' => 'Pilih Jurusan', '--' => '---------------');
 foreach($jurusan as $list)
 {
-	$data_jurusan[$list->id] = $list->nama . ' (' . $list->strata . ')';
+	$data_jurusan[$list->id] = $list->nama . ' (' . $list->prodi . ')';
 }
 
 // Data Form
 $table->set_heading(array('colspan' => 2, 'data' => 'Informasi Data Alumni'));
 $table->add_row(array('width' => '30%'), array('width' => '70%'));
-$table->add_row(form_label('Nomor Induk Mahasiswa'), '<strong>' . $account->userid . '</strong>');
+$table->add_row(form_label('Nomor Induk Mahasiswa'), '<strong>' . $account->username . '</strong>');
 $table->add_row(form_label('Jurusan', 'jurusan'), form_dropdown('jurusan', $data_jurusan, set_value('jurusan', '-'), 'id="jurusan"') . br() . form_error('jurusan'));
 $table->add_row(form_label('Nama Lengkap', 'nama'), form_input('nama', set_value('nama'), 'id="nama" maxlength="255"') . br() . form_error('nama'));
 $table->add_row(form_label('Tempat/Tanggal Lahir', 'ttl'), form_input('ttl', set_value('ttl', 'Tempat, dd/mm/YYYY'), 'id="ttl" maxlength="255"') . br() . form_error('ttl'));

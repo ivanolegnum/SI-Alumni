@@ -63,14 +63,6 @@ class Main_ctrl extends CI_Controller {
 				// Check if the status is '0'
 				if(empty($pa)) redirect('pa');
             }
-            else
-            {
-                // Load Model 
-				$this->load->model('model_admin', 'admin');
-				$pengguna = $this->admin->get_where(array('id_user' => $result->id));
-				// Check if the status is '0'
-				if(empty($admin)) redirect('admin');
-            }
 			
 		}
 		
