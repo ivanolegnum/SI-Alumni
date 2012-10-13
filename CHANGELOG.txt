@@ -22,6 +22,7 @@ Adapun format yang diberikan adalah sebagai berikut:
 [12 Oktober 2012]
 * [ADDED] SI Alumni Code Lobster Project Files.
 * [ADDED] File Javascript: "jquery.validate.js"
+* [ADDED] Test.
 
 [11 Oktober 2012]
 * Versi Sistem: ALPHA 0.5
