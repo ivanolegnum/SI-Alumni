@@ -44,14 +44,14 @@ class Main_ctrl extends CI_Controller {
 			// Setting Session
 			$this->session->set_userdata('AUTH', TRUE);
 			$this->session->set_userdata('LEVEL', $result->level);
-			$this->session->set_userdata('USER_ID', $result->id);
+			$this->session->set_userdata('USER_ID', $result->id_user);
 			
 			// Check if alumni, then redirect a head to alumni page
 			if($result->level == 'alumni')
 			{
 				// Load Model 
 				$this->load->model('model_alumni', 'alumni');
-				$alumni = $this->alumni->get_where(array('id_user' => $result->id));
+				$alumni = $this->alumni->get_where(array('id_user' => $result->id_user));
 				// Check if the status is '0'
 				if(empty($alumni)) redirect('alumni');
 			}else
@@ -59,7 +59,7 @@ class Main_ctrl extends CI_Controller {
 			{
 				// Load Model 
 				$this->load->model('model_pengguna', 'pa');
-				$pengguna = $this->pa->get_where(array('id_user' => $result->id));
+				$pengguna = $this->pa->get_where(array('id_user' => $result->id_user));
 				// Check if the status is '0'
 				if(empty($pa)) redirect('pa');
             }

@@ -26,7 +26,7 @@
 		
 		
 		// Get User data
-		$USER_DATA = $this->user->get_where(array('id' => $USER_ID, 'level' => $LEVEL));
+		$USER_DATA = $this->user->get_where(array('id_user' => $USER_ID, 'level' => $LEVEL));
 		
         $TITLE = 'Panel Anggota';
         

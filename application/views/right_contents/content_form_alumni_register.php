@@ -22,7 +22,7 @@ $table->set_template($tpl);
 $data_jurusan = array('-' => 'Pilih Jurusan', '--' => '---------------');
 foreach($jurusan as $list)
 {
-	$data_jurusan[$list->id] = $list->nama . ' (' . $list->prodi . ')';
+	$data_jurusan[$list->id_jurusan] = $list->nama . ' (' . $list->prodi . ')';
 }
 
 // Data Form

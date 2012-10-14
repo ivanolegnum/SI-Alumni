@@ -1,12 +1,12 @@
 <?php
 	
 	// Store Account Data
-	$account = $this->user->get_where(array('id' => $this->session->userdata('USER_ID')));
+	$account = $this->user->get_where(array('id_user' => $this->session->userdata('USER_ID')));
 	
 	// Jurusan
 	if(!empty($ALUMNI))
 	{
-		$JURUSAN = $this->jurusan->get_where(array('id' => $ALUMNI->id_jurusan));
+		$JURUSAN = $this->jurusan->get_where(array('id_jurusan' => $ALUMNI->id_jurusan));
 	}
 	
 ?>
@@ -40,7 +40,7 @@
 		$table->set_template($tpl);
 		
 		// Form Open
-		echo form_open('alumni/e/update', 'id="update-alumni" class="register-alumni"');
+		echo form_open('alumni/e/update_alumni', 'id="update-alumni" ');
 		
 		$table->set_heading(array('width' => '40%', 'data' => 'Informasi Data Alumni'), array('align' => 'right', 'width' => '60%', 'data' => '<a href="javascript: void(0);" id="uia-click">[Update Informasi Alumni]</a>'));
 		// Informasi Data Alumni
@@ -69,17 +69,65 @@
 		$table->add_row(array('colspan' => '2', 'align' => 'center', 'data' => form_submit(NULL, 'Update Data Alumni', 'id="btn-update-alumni" class="submit"').form_button(NULL, 'Batal', 'id="btn-update-alumni-batal"')));
 		echo $table->generate();
 		
-		// Informasi Pekerjaan
-		$table->clear();
-		$table->set_heading(array('width' => '40%', 'data' => 'Informasi Data Pekerjaan'), array('align' => 'right', 'width' => '60%', 'data' => '<a href="javascript: void(0);" id="udp-click">[Update Data Pekerjaan]</a>'));
-		echo $table->generate();
 		
 		// Hidden Form
 		echo form_hidden('id_user', $this->session->userdata('USER_ID'));
 		
 		// Form Close
 		echo form_close();
+        
+		// Informasi Pekerjaan
+		$table->clear();
+		$table->set_heading(array('width' => '40%', 'data' => 'Informasi Data Pekerjaan'), array('align' => 'right', 'width' => '60%', 'data' => '&nbsp;'));
+        
+        // Script for empty jobs
+        if(empty($LIST_PEKERJAAN))
+        {
+            $table->add_row(array('id' => 'update-pekerjaan', 'colspan' => 2, 'align' => 'center', 'data' => 'Belum mempunyai pekerjaan.'))
+        ?>
+        <script type="text/javascript">
+            $(function() {
+               $('#btn-tambah-pekerjaan').show(); 
+            });
+        </script>
+        <?php
+        } else {
+            foreach($LIST_PEKERJAAN as $list)
+            {
+                // Form Open
+                $table->add_row(array('colspan' => 2, 'data' => form_open('alumni/update/pekerjaan', NULL, array('id_pekerjaan' => $list->id_pekerjaan))));
+        		$table->add_row(array('width' => '50%', 'data' => form_label('Tempat Bekerja', 'tempat_kerja')), array('width' => '50%', 'data' => '<span>'.$list->tempat.'</span>'));
+        		$table->add_row(form_label('Status Pekerjaan', 'status_kerja'), '<span>'.$list->status.' Bekerja</span>');
+        		$table->add_row(form_label('Alamat Tempat Bekerja', 'alamat_kerja'), '<span>' . $list->alamat . '</span>');
+        		$table->add_row(form_label('Jabatan Bekerja', 'jabatan_kerja'), '<span>'.$list->jabatan.'</span>');
+        		$table->add_row(array('colspan' => 2, 'data' => '<hr />'));
+                $table->add_row(array('colspan' => 2, 'data' => form_submit(NULL, 'Update Informasi Pekerjaan')));
+                $table->add_row(array('colspan' => 2, 'data' => '<hr />'));
+                // Form Close
+                $table->add_row(array('colspan' => 2, 'data' => form_close()));
+            }   
+        }
+        
+        // Buttons
+		$table->add_row(array('align' => 'right', 'data' => form_button(NULL, '[+] Tambah Pekerjaan', 'id="btn-tambah-pekerjaan"')));
+		echo $table->generate();
 		
+        // Form Open For Tambah Pekerjaan
+        echo '<div id="form-tambah-pekerjaan">';
+        echo form_open('alumni/e/tambah_kerja', 'id="tambah-pekerjaan" ');
+        $table->clear();
+        $table->set_heading(array('data' => 'Form Tambah Pekerjaan', 'colspan' => 2));
+        $table->add_row(array('width' => '50%', 'data' => form_label('Tempat Bekerja', 'in_tempat_kerja')), array('width' => '50%', 'data' => form_input('in_tempat_kerja', NULL, 'id="in_tempat_kerja"')));
+        $status = array('' => 'Pilih Status Pekerjaan', 'Aktif' => 'Aktif Bekerja', 'Tidak Aktif' => 'Tidak Aktif Bekerja');
+        $table->add_row(form_label('Status Pekerjaan', 'in_status_kerja'), form_dropdown('in_status_kerja', $status, '', 'id="in_status_kerja"'));
+        $table->add_row(form_label('Alamat Tempat Bekerja', 'in_alamat_kerja'), form_textarea('in_alamat_kerja', NULL, 'id="in_alamat_kerja"'));
+        $table->add_row(form_label('Jabatan Bekerja', 'in_jabatan_kerja'), form_input('in_jabatan_kerja', NULL, 'id="in_jabatan_kerja"'));
+        $table->add_row(array('data' => form_submit(NULL, 'Tambah Data Pekerjaan'), 'colspan' => 2, 'align' => 'center'));
+        echo $table->generate();
+        echo form_hidden('id_user', $this->session->userdata('USER_ID'));
+        echo form_close();
+        echo '</div>';
+        
 		?>
 		<!-- Table End -->
 		</div>

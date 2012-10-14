@@ -22,7 +22,7 @@
 				{
 					foreach($LIST_JURUSAN as $row)
 					{
-			?><li><?php echo anchor('admincp/alumni/'.$year.'/'.$row->id, $row->nama);?></li><?php
+			?><li><?php echo anchor('admincp/alumni/'.$year.'/'.$row->id_jurusan, $row->nama);?></li><?php
 					}
 				} else echo '<li>Belum ada data jurusan.</li>';
 			?>

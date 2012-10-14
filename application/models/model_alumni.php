@@ -21,7 +21,7 @@ class Model_alumni extends CI_Model
 	public function get_all($query = NULL, $islike = FALSE)
 	{
 		// Order By
-		$this->db->order_by('id', 'asc');
+		$this->db->order_by('id_alumni', 'asc');
 		// Check the query parameter
 		if(isset($query) && !$islike) $this->db->where($query);
 		// Check if is like?

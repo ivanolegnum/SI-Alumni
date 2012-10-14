@@ -96,7 +96,7 @@ class Alumni_ctrl extends CI_Controller {
 			
 				// Alumni Data
 				'id_user' => $this->session->userdata('USER_ID'),
-				'nim' => $this->user->get_where(array('id' => $this->session->userdata('USER_ID')))->username,
+				'nim' => $this->user->get_where(array('id_user' => $this->session->userdata('USER_ID')))->username,
 				'nama' => set_value('nama'),
 				'id_jurusan' => set_value('jurusan'),
 				'ttl' => set_value('ttl'),
@@ -166,11 +166,15 @@ class Alumni_ctrl extends CI_Controller {
 			echo '</html>';
 			exit();
 		} else {
+            // Load Model Pekerjaan
+            $this->load->model('model_pekerjaan', 'pekerjaan');
+          
 			// HTML Data
 			$html = array(
 				'CONTENT' => $this->load->view('right_contents/content_alumni_frontpage', array(
 					'ALUMNI' => $this->alumni->get_where(array('id_user' => $this->session->userdata('USER_ID'))),
-					'LIST_JURUSAN' => $this->jurusan->get_all()
+					'LIST_JURUSAN' => $this->jurusan->get_all(),
+                    'LIST_PEKERJAAN' => $this->pekerjaan->get_info_by('id_user', $this->session->userdata('USER_ID'))
 				), TRUE)
 			);
 			
@@ -274,5 +278,47 @@ class Alumni_ctrl extends CI_Controller {
 			echo TRUE;
 		}
 	}
-
+    
+    // AJAX Tambah Pekerjaan
+    public function AJAX_Tambah_Kerja()
+    {
+        // Form Validation
+		$this->load->library('form_validation');
+		$validate = $this->form_validation;
+        
+        // Set Rules
+        $validate
+            ->set_rules('id_user', NULL, 'required|trim')
+            ->set_rules('tempat_kerja', NULL, 'required|trim')
+            ->set_rules('status_kerja', NULL, 'required|trim')
+            ->set_rules('alamat_kerja', NULL, 'required|trim')
+            ->set_rules('jabatan_kerja', NULL, 'required|trim');
+        
+        // Run
+        if(!$validate->run()) echo FALSE;
+        else
+        {
+            // Get Data
+            $data = array(
+                'id_user' => set_value('id_user'),
+                'tempat' => set_value('tempat_kerja'),
+                'alamat' => set_value('alamat_kerja'),
+                'status' => set_value('status_kerja'),
+                'jabatan' => set_value('jabatan_kerja')
+            );
+            
+            // Load Model
+            $this->load->model('model_pekerjaan', 'pekerjaan');
+            $this->pekerjaan->insert($data);
+            
+            // Return Redirect URL
+            echo site_url('alumni');
+        }
+    }
+    
+    // Form & Proses Update Data Pekerjaan
+    public function update_pekerjaan()
+    {
+        
+    }
 }

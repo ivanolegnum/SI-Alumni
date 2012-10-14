@@ -5,6 +5,7 @@
 // Main Function
 $(function()
 {
+    
 	// Update Informasi Alumni Clicked
 	$('#uia-click').click(function()
 	{
@@ -121,6 +122,7 @@ $(function()
 					$('#uia-click').show();
 					
 					$('#btn-update-alumni').hide();
+					$('#btn-update-alumni-batal').hide();
 					
 					// Alert
 					//alert('INFORMASI::\nSelamat, data kamu berhasil diubah!\nSilahkan klik "OK".');
@@ -149,6 +151,7 @@ $(function()
 	$('#btn-update-alumni-batal').click(function() {
 		window.location.reload();
 	});
+    
 });
 
 // Fungsi untuk mengedit field
@@ -182,4 +185,10 @@ function SaveField(fieldname)
 	
 	// Effects
 	$('#'+fieldname).hide().fadeIn();
+}
+
+// Fungsi Add URL JS
+function AddURL(file, base_url)
+{
+    document.write('<script type="text/javascript" src="'+ base_url + '/ext/' + file +'.js"></script>');    
 }

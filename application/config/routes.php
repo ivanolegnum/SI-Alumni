@@ -54,7 +54,9 @@ $route['admincp/alumni/(:num)/(:num)'] = 'admin_ctrl/page_alumni_list/$1/$2';
 
 // Alumni Page
 $route['alumni'] = 'alumni_ctrl';
-$route['alumni/e/update'] = 'alumni_ctrl/AJAX_Update_Alumni';
+$route['alumni/e/update_alumni'] = 'alumni_ctrl/AJAX_Update_Alumni';
+$route['alumni/e/tambah_kerja'] = 'alumni_ctrl/AJAX_Tambah_Kerja';
+$route['alumni/update/pekerjaan'] = 'alumcni_ctrl/update_pekerjaan';
 
 // Pengguna Alumni
 $route['pa'] = 'pa_ctrl';
