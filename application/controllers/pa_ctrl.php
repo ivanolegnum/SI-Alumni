@@ -36,10 +36,13 @@ class Pa_ctrl extends CI_Controller {
     public function index()
     {
         $html = array (
-                        'CONTENT' => $this->load->view('right_contents/content_pa_frontpage',NULL,TRUE),
-                        'TITLE' => "Head Menu"
+                        'CONTENT' => $this->load->view("right_contents/content_pa_frontpage",null,true) 
+ 
                         );
         $this->load->view("view_master",$html);
     }
+    
  }
+    
+    
  
