@@ -1,6 +1,7 @@
 <?php
 	// Year
 	$year = $this->uri->segment(3);
+    $id_jurusan = $this->uri->segment(4);
 ?>
 <!-- Admin: List Data Alumni -->
 
@@ -10,7 +11,7 @@
 	
 	<div class="content">
 	
-	<p class="breadcrumb"><?php echo anchor('admincp', '[Beranda]');?> &raquo; <?php echo anchor('admincp/alumni', '[Manajemen Alumni]');?> &raquo; <?php echo anchor('admincp/alumni/' . $year, '[Angkatan' . $year . ']');?> &raquo; <strong><?php echo $JURUSAN;?></strong></p>
+	<p class="breadcrumb"><?php echo anchor('admincp', '[Beranda]');?> &raquo; <?php echo anchor('admincp/alumni', '[Manajemen Alumni]');?> &raquo; <?php echo anchor('admincp/alumni/' . $year, '[Angkatan ' . $year . ']');?> &raquo; <strong><?php echo $JURUSAN;?></strong></p>
 	<hr />
 	
 	<!-- Table List -->
@@ -28,7 +29,11 @@
 		if(empty($LIST_ALUMNI)) $table->add_row(array('colspan' => 3, 'data' => 'Belum ada data alumni.'));
 		else
 		{
-			// Show All Data
+			foreach($LIST_ALUMNI as $list)
+            {
+                // Show All Data
+                $table->add_row(anchor('admincp/alumni/detail/'.$list->id_alumni.'/'.$year.'/'.$id_jurusan, $list->nim), $list->nama, anchor('admincp/alumni/update/'.$list->id_alumni, '[Edit]'));
+            }
 		}
 		
 		// Generate
