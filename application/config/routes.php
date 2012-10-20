@@ -58,8 +58,9 @@ $route['alumni/e/update_alumni'] = 'alumni_ctrl/AJAX_Update_Alumni';
 $route['alumni/e/tambah_kerja'] = 'alumni_ctrl/AJAX_Tambah_Kerja';
 $route['alumni/update/pekerjaan'] = 'alumcni_ctrl/update_pekerjaan';
 
-// Pengguna Alumni
+// Pengguna Alumni Page
 $route['pa'] = 'pa_ctrl';
+$route['loker'] = 'loker_ctrl';
  
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

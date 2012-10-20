@@ -315,10 +315,4 @@ class Alumni_ctrl extends CI_Controller {
             echo site_url('alumni');
         }
     }
-    
-    // Form & Proses Update Data Pekerjaan
-    public function update_pekerjaan()
-    {
-        
-    }
 }

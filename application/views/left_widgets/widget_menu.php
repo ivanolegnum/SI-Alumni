@@ -12,9 +12,26 @@
     }
     else
     {
-        $TITLE = 'Menu';
+        if ($this->session->userdata('LEVEL') == 'alumni')
+        {
+            $TITLE = 'Menu';
     
-        $CONTENT = "Isi Menu Setelah Login";
+            $CONTENT = "Isi Menu Alumni Setelah Login";
+        }
+        else
+        if ($this->session->userdata('LEVEL') == 'pengguna')
+        {
+            $TITLE = 'Menu';
+    
+            $CONTENT = "Isi Menu Mitra Alumni Setelah Login";
+            $CONTENT = '<a>'. anchor('loker', 'Masukkan Lowongan Kerja')  .'</a>';
+        }
+        else if ($this->session->userdata('LEVEL') == 'admin')
+        {
+            $TITLE = 'Menu';
+    
+            $CONTENT = "Isi Menu ADMIN Setelah Login";
+        }
     }
     
 ?>

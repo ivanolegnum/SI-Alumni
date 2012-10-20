@@ -21,13 +21,11 @@
 	} else {
 		// Get LEVEL and USER_ID
 		$LEVEL = $this->session->userdata('LEVEL');
-		$USER_ID = $this->session->userdata('USER_ID');
-		
-		
+		$USER_ID = $this->session->userdata('USER_ID');	
 		
 		// Get User data
 		$USER_DATA = $this->user->get_where(array('id_user' => $USER_ID, 'level' => $LEVEL));
-		
+        		
         $TITLE = 'Panel Anggota';
         
 		// Content
