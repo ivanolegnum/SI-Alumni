@@ -1,4 +1,4 @@
-<!-- Pengguna Alumni Frontpage Content -->
+<!-- Frontpage Content -->
 
 <!-- Headline News -->
 <div class="right-box">
@@ -20,7 +20,6 @@
 <div class="right-box">
 	
 	<div class="small-col">
-
 	
 		<span class="content-title">Agenda Terakhir</span>
 		
@@ -39,7 +38,21 @@
 		<span class="content-title">Galeri Terakhir</span>
 		
 		<div class="content">
-			<p><small>Iniadalah Colomn Medium</small></p>
+			
+			<ul class="list-galeri">
+			
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+				<li><?php echo img('assets/cdn/galeri/default.jpg');?></li>
+			
+			</ul>
 			<div style="clear: both;"></div>
 			
 		</div>

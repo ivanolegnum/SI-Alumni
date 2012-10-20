@@ -20,7 +20,7 @@ class Model_jurusan extends CI_Model {
 	public function get_all($query = NULL)
 	{
 		// Order By
-		$this->db->order_by('id', 'asc');
+		$this->db->order_by('id_jurusan', 'asc');
 		// Check the query parameter
 		if(isset($query)) $this->db->where($query);
 		// Return

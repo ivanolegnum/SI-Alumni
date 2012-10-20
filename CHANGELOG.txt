@@ -1,5 +1,5 @@
 ###################################################
-##### CHANGELOG: VERSION A.0.5                #####
+##### CHANGELOG: VERSION A.0.6                #####
 ##### SISTEM INFORMASI ALUMNI FASILKOM UNSRI  #####
 ##### AUTHOR: REDI VANHAR, NURIMANSYAH RIFWAN #####
 ###################################################
@@ -19,6 +19,10 @@ Adapun format yang diberikan adalah sebagai berikut:
 ###########################################################################################
 ###########################################################################################
 ----- CHANGELOG START -----
+[14 Oktober 2012]
+* Versi Sistem: ALPHA 0.6
+* [ADDED] File Javascript: "ext/update_alumni.js"
+
 [12 Oktober 2012]
 * [ADDED] SI Alumni Code Lobster Project Files.
 * [ADDED] File Javascript: "jquery.validate.js"

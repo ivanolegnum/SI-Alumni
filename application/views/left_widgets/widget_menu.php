@@ -6,35 +6,32 @@
 	*/
     if (!$this->session->userdata('AUTH'))
     {
-        
         $TITLE = 'Menu';
     
-        $CONTENT = "Isi Menu Sebelum Login";    
+        $CONTENT = "Isi Menu Belum Login";    
     }
     else
     {
-        if ($this->session->userdata("LEVEL") == 'alumni')
+        if ($this->session->userdata('LEVEL') == 'alumni')
         {
             $TITLE = 'Menu';
     
-            $CONTENT = "Isi Menu Setelah Login Alumni";
+            $CONTENT = "Isi Menu Alumni Setelah Login";
         }
         else
-        if ($this->session->userdata("LEVEL") == 'pengguna')
+        if ($this->session->userdata('LEVEL') == 'pengguna')
         {
             $TITLE = 'Menu';
     
-            $CONTENT = "Isi Menu Setelah Login Pengguna";
-            $CONTENT .= '<li>'.anchor('kelola_profil_pa', 'Isi Data Profil Perusahaan').'</li>';
-            $CONTENT .= '<li>'.anchor('kelola_lowongan_kerja', 'Kelola Lowongan Kerja').'</li>';
+            $CONTENT = "Isi Menu Mitra Alumni Setelah Login";
+            $CONTENT = '<a>'. anchor('loker', 'Masukkan Lowongan Kerja')  .'</a>';
         }
-        else
+        else if ($this->session->userdata('LEVEL') == 'admin')
         {
             $TITLE = 'Menu';
     
-            $CONTENT = "Isi Menu Setelah Login Admin";
+            $CONTENT = "Isi Menu ADMIN Setelah Login";
         }
-        
     }
     
 ?>

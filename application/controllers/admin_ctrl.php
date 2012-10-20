@@ -97,7 +97,7 @@ class Admin_ctrl extends CI_Controller {
 		// HTML Data
 		$html = array(
 			'CONTENT' => $this->load->view('right_contents/content_admin_alumni_list_data', array(
-				'JURUSAN' => $this->jurusan->get_where(array('id' => $id_jurusan))->nama,
+				'JURUSAN' => $this->jurusan->get_where(array('id_jurusan' => $id_jurusan))->nama,
 				'LIST_ALUMNI' => $this->alumni->get_all(array('tgl_wisuda' => $year), TRUE)
 			), TRUE)
 		);

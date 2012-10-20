@@ -1,7 +1,7 @@
 <?php
 	
 	// Store Account Data
-	$account = $this->user->get_where(array('id' => $this->session->userdata('USER_ID')));
+	$account = $this->user->get_where(array('id_user' => $this->session->userdata('USER_ID')));
 	
 ?>
 <!-- Administration Page -->
@@ -13,7 +13,7 @@
 	
 	<div class="content">
 	
-		<p>Selamat datang, <strong><?php echo $account->userid;?></strong> dihalaman Administrator!</p>
+		<p>Selamat datang, <strong><?php echo $account->username;?></strong> dihalaman Administrator!</p>
 		<p>Pada halaman ini, Anda dapat melihat laporan informasi alumni dan pengguna alumni.<br />
 		Anda juga dapat mengubah(edit) ataupun menghapus data alumni maupun pengguna alumni pada halaman ini.</p>
 		<h1>Administration Menu</h1>
