@@ -54,15 +54,7 @@ class Main_ctrl extends CI_Controller {
 				$alumni = $this->alumni->get_where(array('id_user' => $result->id_user));
 				// Check if the status is '0'
 				if(empty($alumni)) redirect('alumni');
-			}else
-            if ($result->level == 'pengguna')
-			{
-				// Load Model 
-				$this->load->model('model_pengguna', 'pa');
-				$pengguna = $this->pa->get_where(array('id_user' => $result->id_user));
-				// Check if the status is '0'
-				if(empty($pa)) redirect('pa');
-            }
+			}
 			
 		}
 		
