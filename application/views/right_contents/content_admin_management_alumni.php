@@ -18,7 +18,7 @@
 				
 				for($old; $old <= $new; $old++)
 				{
-				?><li><?php echo anchor('admincp/alumni/'.$old, 'Angkatan '.$old);?></li><?php
+				?><li><?php echo anchor('admincp/alumni/'. ($old + 4), 'Angkatan '.$old);?></li><?php
 				}
 			?>
 		</ul>

@@ -5,22 +5,25 @@
 // Main Function
 $(function()
 {
+    
 	// Update Informasi Alumni Clicked
 	$('#uia-click').click(function()
 	{
 		// Informasi Alumni
+        /*
 		EditField('alumni_nama', 'text');
 		EditField('alumni_ttl', 'text');
 		EditField('alumni_yudisium', 'text');
 		EditField('alumni_wisuda', 'text');
 		EditField('alumni_studi', 'text');
 		EditField('alumni_ipk', 'text');
+        */
 		EditField('alumni_alamat', 'textarea');
 		EditField('alumni_email', 'text');
 		EditField('alumni_telp', 'text');
 		EditField('alumni_ponsel', 'text');
 		// Informasi Orang Tua
-		EditField('alumni_nama_ot', 'text');
+		//EditField('alumni_nama_ot', 'text');
 		EditField('alumni_alamat_ot', 'textarea');
 		EditField('alumni_telp_ot', 'text');
 		EditField('alumni_ponsel_ot', 'text');
@@ -80,19 +83,19 @@ $(function()
 				data: {
 					// Data Alumni
 					id_user: form.id_user.value,
-					nama: form.alumni_nama.value,
+					/*nama: form.alumni_nama.value,
 					ttl: form.alumni_ttl.value,
 					yudisium: form.alumni_yudisium.value,
 					wisuda: form.alumni_wisuda.value,
 					studi: form.alumni_studi.value,
 					ipk: form.alumni_ipk.value,
-					alamat: form.alumni_alamat.value,
+					*/alamat: form.alumni_alamat.value,
 					email: form.alumni_email.value,
 					telp: form.alumni_telp.value,
 					ponsel: form.alumni_ponsel.value,
 					
 					// Data Orang Tua
-					nama_ot: form.alumni_nama_ot.value,
+					//nama_ot: form.alumni_nama_ot.value,
 					alamat_ot: form.alumni_alamat_ot.value,
 					telp_ot: form.alumni_telp_ot.value,
 					ponsel_ot: form.alumni_ponsel_ot.value
@@ -101,18 +104,18 @@ $(function()
 				// Check if not error
 				if(data)
 				{
-					SaveField('alumni_nama');
+					/*SaveField('alumni_nama');
 					SaveField('alumni_ttl');
 					SaveField('alumni_yudisium');
 					SaveField('alumni_wisuda');
 					SaveField('alumni_studi');
 					SaveField('alumni_ipk');
-					SaveField('alumni_alamat');
+					*/SaveField('alumni_alamat');
 					SaveField('alumni_email');
 					SaveField('alumni_telp');
 					SaveField('alumni_ponsel');
 					// Orang Tua
-					SaveField('alumni_nama_ot');
+					//SaveField('alumni_nama_ot');
 					SaveField('alumni_alamat_ot');
 					SaveField('alumni_telp_ot');
 					SaveField('alumni_ponsel_ot');
@@ -121,6 +124,7 @@ $(function()
 					$('#uia-click').show();
 					
 					$('#btn-update-alumni').hide();
+					$('#btn-update-alumni-batal').hide();
 					
 					// Alert
 					//alert('INFORMASI::\nSelamat, data kamu berhasil diubah!\nSilahkan klik "OK".');
@@ -149,6 +153,7 @@ $(function()
 	$('#btn-update-alumni-batal').click(function() {
 		window.location.reload();
 	});
+    
 });
 
 // Fungsi untuk mengedit field
@@ -182,4 +187,10 @@ function SaveField(fieldname)
 	
 	// Effects
 	$('#'+fieldname).hide().fadeIn();
+}
+
+// Fungsi Add URL JS
+function AddURL(file, base_url)
+{
+    document.write('<script type="text/javascript" src="'+ base_url + '/ext/' + file +'.js"></script>');    
 }

@@ -97,8 +97,8 @@ class Admin_ctrl extends CI_Controller {
 		// HTML Data
 		$html = array(
 			'CONTENT' => $this->load->view('right_contents/content_admin_alumni_list_data', array(
-				'JURUSAN' => $this->jurusan->get_where(array('id' => $id_jurusan))->nama,
-				'LIST_ALUMNI' => $this->alumni->get_all(array('tgl_wisuda' => $year), TRUE)
+				'JURUSAN' => $this->jurusan->get_where(array('id_jurusan' => $id_jurusan))->nama,
+				'LIST_ALUMNI' => $this->alumni->get_all(array('tgl_wisuda' => $year, 'id_jurusan' => $id_jurusan), TRUE)
 			), TRUE)
 		);
 		
@@ -106,6 +106,33 @@ class Admin_ctrl extends CI_Controller {
 		$this->load->view('view_master', $html);
 	
 	}
+    
+    // Alumni: Detail
+    public function page_alumni_detail($id = 0, $year = 0, $id_jurusan)
+    {
+        // Check ID
+        if(!$id) redirect('admincp');
+        
+        // Load Model
+        $this->load->model('model_alumni', 'alumni');
+        $this->load->model('model_jurusan', 'jurusan');
+        
+        // Load Library
+        $this->load->library('table');
+        
+        // Check ID
+        if(!$this->alumni->get_where(array('id_alumni' => $id))) redirect('admincp/alumni');
+        
+        // HTML Data
+        $html = array('CONTENT' => $this->load->view('right_contents/content_admin_alumni_detail', array(
+            'JURUSAN' => $this->jurusan->get_where(array('id_jurusan' => $id_jurusan)),
+            'ALUMNI' => $this->alumni->get_where(array('id_alumni' => $id)),
+            'YEAR' => $year
+        ), TRUE));
+        
+        // View Master Template
+		$this->load->view('view_master', $html);
+    }
 	
 	// ===================================================================================================
 	// ===================================================================================================

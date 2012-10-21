@@ -21,6 +21,9 @@
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.2.min.js');?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.validate.js');?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/fasilkom.js');?>"></script>
+    <script type="text/javascript">
+        AddURL('update_alumni', '<?php echo base_url('assets/js/');?>');
+    </script>
 	
 </head>
 
@@ -80,7 +83,7 @@
 		
 		<!-- Bottom -->
 		<div class="bottom">
-			Copyright &copy; Fakultas Ilmu Komputer Universitas Sriwijaya. 2012. Allright Reserved. Version A.0.5.
+			Copyright &copy; Fakultas Ilmu Komputer Universitas Sriwijaya. 2012. Allright Reserved. Version A.0.7.
 		</div>
 		
 	</div>

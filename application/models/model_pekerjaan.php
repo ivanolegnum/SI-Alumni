@@ -18,5 +18,29 @@ class Model_pekerjaan extends CI_Model {
 		$this->db->insert('pekerjaan');
 		return true;
 	}
+    
+    // Get Where
+    public function get_info_by($var = NULL, $val = NULL)
+    {
+        // Order By
+        $this->db->order_by('id_pekerjaan', 'asc');
+        
+        return $this->db->get_where('pekerjaan', array($var => $val))->result();
+    }
+    
+    // Get Where Row
+    public function get_where($var = NULL, $val = NULL)
+    {
+        return $this->db->get_where('pekerjaan', array($var => $val))->row();
+    }
+    
+    // Update Data
+    public function update($id = NULL, $data = NULL)
+    {
+        $this->db->set($data);
+        $this->db->where('id_pekerjaan', $id);
+        $this->db->update('pekerjaan');
+        return TRUE;
+    }
 
 }
