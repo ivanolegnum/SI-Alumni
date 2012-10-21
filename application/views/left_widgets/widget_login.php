@@ -47,9 +47,7 @@
 				break;
 
                 // Level Pengguna Alumni
-				case 'pengguna':
-					$CONTENT .= '<li>'.anchor('pa', 'Halaman Pengguna Alumni').'</li>';
-				break;                
+				                
                 
 			}
 			

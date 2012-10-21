@@ -24,7 +24,7 @@
             $TITLE = 'Menu';
     
             $CONTENT = "Isi Menu Mitra Alumni Setelah Login";
-            $CONTENT = '<a>'. anchor('loker', 'Masukkan Lowongan Kerja')  .'</a>';
+            $CONTENT = '<a>'. anchor('loker', 'Manajemen Lowongan Kerja')  .'</a>';
         }
         else if ($this->session->userdata('LEVEL') == 'admin')
         {
