@@ -10,7 +10,7 @@ class Loker_ctrl extends CI_Controller {
 		// Load User Model
 		$this->load->model('model_user', 'user');
         $this->load->model('model_pekerjaan','pekerjaan');
-		
+        
 		}
 		// End Checking AUTH & LEVEL
         
@@ -24,6 +24,10 @@ class Loker_ctrl extends CI_Controller {
         public function tampilkan_loker()
         {
             
+            $html = array ('CONTENT' => $this->load->view('right_contents/content_pa_loker',null,true));
+            
+            $this->load->view('view_master',$html);
+               
         }
         
         public function masukkan_loker()

@@ -10,8 +10,8 @@
 		
 		<h1>Menu Manajemen Loker</h1>
 		<ul>
-            <li><?php echo anchor('loker/tampilkan_loker/', 'Tampilkan Daftar Lowongan Kerja');?></li>
-			<li><?php echo anchor('loker/masukkan_loker/', 'Masukkan Lowongan Kerja');?></li>                   
+            <li><?php echo anchor('loker/tampilkan_loker', 'Tampilkan Daftar Lowongan Kerja');?></li>
+			<li><?php echo anchor('loker/masukkan_loker', 'Masukkan Lowongan Kerja');?></li>                   
 		</ul>
 	</div>
 	
