@@ -35,10 +35,19 @@ class Pa_ctrl extends CI_Controller {
     
     public function index()
     {
+<<<<<<< HEAD
         $html = array ('CONTENT' => $this->load->view ('right_contents/content_pa_frontpage',null, TRUE));
         
+=======
+        $html = array (
+                        'CONTENT' => $this->load->view("right_contents/content_pa_frontpage",null,true) 
+ 
+                        );
+>>>>>>> master
         $this->load->view("view_master",$html);
     }
     
  }
+    
+    
  

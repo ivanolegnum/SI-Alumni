@@ -51,12 +51,13 @@ $route['admincp'] = 'admin_ctrl';
 $route['admincp/alumni'] = 'admin_ctrl/page_management_alumni';
 $route['admincp/alumni/(:num)'] = 'admin_ctrl/page_alumni_list_jurusan/$1';
 $route['admincp/alumni/(:num)/(:num)'] = 'admin_ctrl/page_alumni_list/$1/$2';
+$route['admincp/alumni/detail/(:num)/(:num)/(:num)'] = 'admin_ctrl/page_alumni_detail/$1/$2/$3';
 
 // Alumni Page
 $route['alumni'] = 'alumni_ctrl';
 $route['alumni/e/update_alumni'] = 'alumni_ctrl/AJAX_Update_Alumni';
 $route['alumni/e/tambah_kerja'] = 'alumni_ctrl/AJAX_Tambah_Kerja';
-$route['alumni/update/pekerjaan'] = 'alumcni_ctrl/update_pekerjaan';
+$route['alumni/update/pekerjaan'] = 'alumni_ctrl/update_pekerjaan';
 
 // Pengguna Alumni Page
 $route['pa'] = 'pa_ctrl';

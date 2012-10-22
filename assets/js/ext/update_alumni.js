@@ -59,5 +59,23 @@ $(function() {
             });
         }
    });
-   
+
+    // Tambah Pekerjaan Validation
+   $('#update-form-pekerjaan').validate({
+        // Rules
+        rules: {
+            tempat_kerja: { required: true },
+            status_kerja: { required: true },
+            alamat_kerja: { required: true },
+            jabatan_kerja: { required: true }
+        },
+        
+        // Message
+        messages: {
+            tempat_kerja: "* Tempat kerja harus diisi!",
+            status_kerja: "* Status kerja harus diisi!",
+            alamat_kerja: "* Alamat kerja harus diisi!",
+            jabatan_kerja: "* Jabatan kerja harus diisi!"
+        }
+   });   
 });

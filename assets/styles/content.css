@@ -60,6 +60,11 @@
 	margin-top: 10px;
 }
 
+.right-box a
+{
+    color: #6F0B00;
+}
+
 .right-box .small-col
 {
 	width: 300px;

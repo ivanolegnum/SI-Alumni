@@ -230,18 +230,18 @@ class Alumni_ctrl extends CI_Controller {
 		$validate
 		// Data Alumni
 		->set_rules('id_user', NULL, 'required|trim|numeric')
-		->set_rules('nama', NULL, 'required|trim')
+		/*->set_rules('nama', NULL, 'required|trim')
 		->set_rules('ttl', NULL, 'required|trim')
 		->set_rules('yudisium', NULL, 'required|trim')
 		->set_rules('wisuda', NULL, 'required|trim')
 		->set_rules('studi', NULL, 'required|trim')
 		->set_rules('ipk', NULL, 'required|trim')
-		->set_rules('alamat', NULL, 'required|trim')
+		*/->set_rules('alamat', NULL, 'required|trim')
 		->set_rules('email', NULL, 'required|trim|valid_email')
 		->set_rules('telp', NULL, 'required|trim|numeric')
 		->set_rules('ponsel', NULL, 'trim|numeric')
 		// Data Orang Tua
-		->set_rules('nama_ot', NULL, 'required|trim')
+		//->set_rules('nama_ot', NULL, 'required|trim')
 		->set_rules('alamat_ot', NULL, 'required|trim')
 		->set_rules('telp_ot', NULL, 'required|trim|numeric')
 		->set_rules('ponsel_ot', NULL, 'trim|numeric');
@@ -254,18 +254,18 @@ class Alumni_ctrl extends CI_Controller {
 			$id_user = set_value('id_user');
 			$data = array(
 				// Data Alumni
-				'nama' => set_value('nama'),
+				/*'nama' => set_value('nama'),
 				'ttl' => set_value('ttl'),
 				'tgl_yudisium' => set_value('yudisium'),
 				'tgl_wisuda' => set_value('wisuda'),
 				'lama_studi' => set_value('studi'),
 				'ipk' => set_value('ipk'),
-				'alamat' => set_value('alamat'),
+				*/'alamat' => set_value('alamat'),
 				'email' => set_value('email'),
 				'telepon' => set_value('telp'),
 				'ponsel' => set_value('ponsel'),
 				// Data Orang Tua
-				'nama_ot' => set_value('nama_ot'),
+				//'nama_ot' => set_value('nama_ot'),
 				'alamat_ot' => set_value('alamat_ot'),
 				'telepon_ot' => set_value('telp_ot'),
 				'ponsel_ot' => set_value('ponsel_ot')
@@ -315,4 +315,58 @@ class Alumni_ctrl extends CI_Controller {
             echo site_url('alumni');
         }
     }
+<<<<<<< HEAD
+=======
+    
+    // Form & Proses Update Data Pekerjaan
+    public function update_pekerjaan()
+    {
+        // Get ID Pekerjaan
+        $id_pekerjaan = $this->input->post('id_pekerjaan');
+        
+        // Check ID Pekerjaan
+        if(empty($id_pekerjaan)) redirect('alumni');
+        
+        // Load Model
+        $this->load->model('model_pekerjaan', 'pekerjaan');
+        
+        // Load Table
+        $this->load->library('table');
+        $this->load->library('form_validation'); 
+        
+        $validate = $this->form_validation;
+        $validate
+        // Set Rules
+        ->set_rules('id_pekerjaan', NULL, 'trim|required')
+        ->set_rules('tempat_kerja', NULL, 'trim|required')
+        ->set_rules('status_kerja', NULL, 'trim|required')
+        ->set_rules('alamat_kerja', NULL, 'trim|required')
+        ->set_rules('jabatan_kerja', NULL, 'trim|required');
+        
+        // Run
+        if($validate->run())
+        {
+            // DATA
+            $data = array(
+                'tempat' => set_value('tempat_kerja'),
+                'status' => set_value('status_kerja'),
+                'alamat' => set_value('alamat_kerja'),
+                'jabatan' => set_value('jabatan_kerja')
+            );
+            // Save Data
+            $this->pekerjaan->update($id_pekerjaan, $data);
+            // Redirect
+            redirect('alumni');
+        } else {
+            // HTML Data
+            $html = array('CONTENT' => $this->load->view('right_contents/content_alumni_update_pekerjaan', array(
+                'DATA' => $this->pekerjaan->get_where('id_pekerjaan', $id_pekerjaan)
+            ), TRUE));
+            
+            // View Master Template
+    		$this->load->view('view_master', $html);    
+        }
+        
+    }
+>>>>>>> master
 }

@@ -83,7 +83,7 @@
 		
 		<!-- Bottom -->
 		<div class="bottom">
-			Copyright &copy; Fakultas Ilmu Komputer Universitas Sriwijaya. 2012. Allright Reserved. Version A.0.6.
+			Copyright &copy; Fakultas Ilmu Komputer Universitas Sriwijaya. 2012. Allright Reserved. Version A.0.7.
 		</div>
 		
 	</div>
