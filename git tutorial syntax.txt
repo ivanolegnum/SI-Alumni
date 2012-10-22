@@ -1,0 +1,27 @@
+git config --global user.name "ivanolegnum"
+git config --global user.email "vanhar_redi@yahoo.co.id"
+
+git add -A
+git commit -a -m " "
+
+git remote (ngelist remote)
+git remote add nama_remote_baru url_repo_git_tujuan
+git remote rm nama_remote (hapus remote)
+
+git push -u nama_remote nama_branch
+git push nama_remote nama_branch
+
+git pull nama_remote branch_repo_local
+
+git branch => (untuk melihat branch yg ada )
+git branch -r ( list fetch )
+git branch nama_branch 
+git branch nama_branch nama_fetch ( untuk membuat branch baru dengan fetch yg diminta )
+git branch -D (hapus branch)
+
+git checkout -b nama_branch_baru
+git checkout -b nama_branch_baru nama_fetch 
+
+git fetch nama_remote (untuk nge-fetch)
+git diff nama_branch_local nama_fetch_tujuan
+git merge nama_branch_local nama_fetch_tujuan
