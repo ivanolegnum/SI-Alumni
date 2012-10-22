@@ -55,10 +55,6 @@ class Main_ctrl extends CI_Controller {
 				// Check if the status is '0'
 				if(empty($alumni)) redirect('alumni');
 			}
-<<<<<<< HEAD
-            
-=======
->>>>>>> master
 			
 		}
 		

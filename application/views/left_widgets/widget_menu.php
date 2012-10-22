@@ -13,7 +13,7 @@
     }
     else
     {
-<<<<<<< HEAD
+
         if ($this->session->userdata('LEVEL') == 'alumni')
         {
             $TITLE = 'Menu';
@@ -34,30 +34,7 @@
     
             $CONTENT = "Isi Menu ADMIN Setelah Login";
         }
-=======
-        if ($this->session->userdata("LEVEL") == 'alumni')
-        {
-            $TITLE = 'Menu';
-    
-            $CONTENT = "Isi Menu Setelah Login Alumni";
-        }
-        else
-        if ($this->session->userdata("LEVEL") == 'pengguna')
-        {
-            $TITLE = 'Menu';
-    
-            $CONTENT = "Isi Menu Setelah Login Pengguna";
-            $CONTENT .= '<li>'.anchor('kelola_profil_pa', 'Isi Data Profil Perusahaan').'</li>';
-            $CONTENT .= '<li>'.anchor('kelola_lowongan_kerja', 'Kelola Lowongan Kerja').'</li>';
-        }
-        else
-        {
-            $TITLE = 'Menu';
-    
-            $CONTENT = "Isi Menu Setelah Login Admin";
-        }
-        
->>>>>>> master
+
     }
     
 ?>
